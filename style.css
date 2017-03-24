@@ -1,0 +1,189 @@
+                /* BOLD*/
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('fonts/ubuntu-b-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-b-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+                /* LIGHT */
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('fonts/ubuntu-l-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-l-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+                /* REGULAR */
+@font-face {
+    font-family: 'ubuntu';
+    src: url('fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+                /* ITALIC */
+@font-face {
+    font-family: 'ubuntuitalic';
+    src: url('fonts/ubuntu-ri-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-ri-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    padding: 1%;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    font-family : ubuntu, Tahoma, serif;
+    font-weight: normal;
+}
+                                        /**** FelxBox ****/
+#flex{
+    display: flex;
+    align-content: space-around;
+
+}
+
+#flex2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+                                        /**** Les Cadres *****/
+
+.lisere{
+    
+    float: left;
+    background-image: linear-gradient(#004c63,#3fd3ff);
+    color: rgba(0,0,0,0);
+    height: 500px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.exp, .comp, .formation{
+    margin-top: 5%;
+    padding: 0 1% 0 0;
+    text-align: center;
+    border: 2px solid #009bbd;
+    box-shadow: 6px 6px 10px black;
+    border-radius: 10px;
+    background-color: rgba(201,201,201,0.85);
+}
+
+.profil{
+    margin: auto;
+    text-align: center;
+    padding: 0 20px 10px 20px;
+    width: 30%;
+    border: 2px solid #009bbd;
+    box-shadow: 6px 6px 10px black;
+    border-radius: 10px;
+    background-color: rgba(201,201,201,0.85);
+}
+
+.photo {
+    box-shadow: 6px 6px 10px black;
+    border-radius: 10px;
+    border: 2px solid #009bbd;
+}
+
+                                        /**** Les Titres ****/
+
+h1{
+   color: #0088a5; 
+   text-shadow: 1px 1px 2px #000;
+}
+
+h2{
+    text-align:center;
+    font-size: 24px;
+    color: #005e72;
+}
+
+                                        /**** Infobulle 'Contact' *****/
+
+.profil a{
+    color: #005e72;
+    background-color: rgba(208,208,208,0.3);
+    text-decoration: none;
+    box-shadow: inset -2px -2px 6px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    padding: 4px 5px 4px 5px;
+}
+
+.profil a span{
+    position: absolute;
+    margin-top: -23px;
+    margin-left: -170px;
+    color: #009bbd;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #009bbd;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow:5px 5px 5px rgba(0,0,0,.4);
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.profil a:hover span{
+    opacity: 1;
+    transform: translateX(0px);
+    transition:all 0.5s;
+}
+
+                                        /***** Version Mobile *****/
+
+@media all and (max-width: 1024px){
+
+body{
+    min-height: 600px;
+    background: -o-linear-gradient(135deg, #000e18, #002136);
+    background: -webkit-linear-gradient(135deg, #000e18, #002136);
+    background: -moz-linear-gradient(135deg, #000e18, #002136);
+    background: linear-gradient(135deg, #000e18, #002136);
+}
+
+.lisere{
+    display: none;
+}
+
+#flex{
+    margin: 0 5% 0 5%;
+}
+
+#flex2{
+    flex-direction: column;
+    margin: 0 5% 0 5%;
+}
+
+.exp, .comp, .formation{
+    text-align: left;
+    background-color: #a7a7a7; 
+}
+
+.photo{
+    float: right;
+    width: 50%;
+}
+
+*{
+    font-size: 95%;
+}
+
+h1{
+    text-align: center;
+    font-size: 16px;
+    text-shadow: none;
+    color: #005e72;
+}
+
+h2{
+    font-size: 18px;
+}
+
+}
